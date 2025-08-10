@@ -6,21 +6,16 @@ Handles pagination, anti-bot (browser fallback), product fields, and outputs JSO
 ---
 
 ## Project structure
-donizo-material-scraper/
-├── scraper.py # main scraper (config-driven, requests + Playwright fallback)
-├── requirements.txt # pip requirements
+/donizo-material-scraper/
+├── scraper.py
 ├── config/
-│ └── scraper_config.yaml # site/category selectors, pagination, URLs
+│   └── scraper_config.yaml
 ├── data/
-│ └── .gitkeep # output folder (JSON)
+│   └── materials.json
 ├── tests/
-│ ├── conftest.py # adds repo root to sys.path for pytest
-│ └── test_scraper.py # unit tests for parsing
-├── scripts/
-│ └── make_jsonl.py # export vector-ready JSONL (id, text, meta)
-├── api.py # FastAPI app: /materials/{category}, /search (TF-IDF)
-└── .github/workflows/
-└── monthly.yml # scheduled monthly scrape (Actions)
+│   └── test_scraper.py
+└── README.md
+
 
 ---
 
