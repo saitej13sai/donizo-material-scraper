@@ -1,29 +1,4 @@
-# Python venv and cache
 .venv/
-venv/
-__pycache__/
-.pytest_cache/
-*.py[cod]
-*.egg-info/
-.eggs/
-
-# IDE/editor junk
-.vscode/
-.DS_Store
-
-# Playwright browser/cache files
-ms-playwright/
-.playwright/
-.cache/
-**/.cache/ms-playwright/
-
-# Data outputs (keep only .gitkeep placeholder)
 data/*.json
 data/*.jsonl
-data/snaps/*
-!data/.gitkeep
 
-# Coverage reports & logs
-.coverage
-htmlcov/
-*.log
