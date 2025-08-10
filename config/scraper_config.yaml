@@ -1,0 +1,89 @@
+sites:
+  leroymerlin:
+    driver: playwright
+    throttle_seconds: 0.7
+    selectors:
+      product_card: "div.product-card, article.product-card, li.product-card, .lm-product-card"
+      name: ".product-name, .lm-product-title, h2.product-title, a.product__name"
+      price: ".price, .lm-product-price, .product__price, .price__amount"
+      brand: ".brand, .lm-product-brand, .product-brand"
+      url: "a[href]"
+      image: "img"
+      availability: ".availability, .stock-level, .product-availability"
+      unit: ".unit, .price__unit"
+    pagination:
+      param: "page"
+      start_page: 1
+      max_pages: 12
+    categories:
+      tiles:
+        url: "https://www.leroymerlin.fr/produits/carrelage-parquet-sol/carrelage-sol-et-mur/"
+      sinks:
+        url: "https://www.leroymerlin.fr/produits/cuisine/eviers-et-robinets/evier-de-cuisine/"
+      toilets:
+        url: "https://www.leroymerlin.fr/produits/salle-de-bains/toilettes-wc-et-accessoires/wc/"
+      paint:
+        url: "https://www.leroymerlin.fr/produits/peinture-et-droguerie/peinture-interieure/"
+      vanities:
+        url: "https://www.leroymerlin.fr/produits/salle-de-bains/meubles-de-salle-de-bains/meuble-salle-de-bains/"
+      showers:
+        url: "https://www.leroymerlin.fr/produits/salle-de-bains/douches/receveur-de-douche/"
+
+  castorama:
+    throttle_seconds: 0.6
+    selectors:
+      product_card: "a[href$='_CAFR.prd'], a[href*='_CAFR.prd?']"
+      name: ".product__title, .title, h2, [data-qa='product-name']"
+      price: ".price, .product__price, .product-price, .price__value, [data-qa='product-price']"
+      brand: ".product__brand, .brand, [data-qa='product-brand']"
+      url: "a[href$='_CAFR.prd'], a[href*='_CAFR.prd?']"
+      image: "img"
+      availability: ".availability, .stock, .product__stock"
+      unit: ".price__unit"
+    pagination:
+      param: "page"
+      start_page: 1
+      max_pages: 30
+    categories:
+      tiles:
+        url: "https://www.castorama.fr/carrelage-sol/carrelage-sol-et-mural/carrelage-interieur-sol-et-mural/cat_id_3898.cat"
+      sinks:
+        url: "https://www.castorama.fr/cuisine/evier-et-robinet-de-cuisine/evier-de-cuisine/cat_id_838.cat"
+      toilets:
+        url: "https://www.castorama.fr/salle-de-bains-et-wc/wc-et-lave-mains/cat_id_3934.cat"
+      paint:
+        url: "https://www.castorama.fr/peinture/peinture-interieure/cat_id_3622.cat"
+      vanities:
+        url: "https://www.castorama.fr/salle-de-bains-et-wc/meuble-de-salle-de-bains/cat_id_3393.cat"
+      showers:
+        url: "https://www.castorama.fr/salle-de-bains-et-wc/douche/receveur-de-douche/cat_id_3389.cat"
+
+  manomano:
+    driver: playwright
+    throttle_seconds: 0.7
+    selectors:
+      product_card: "div.product-item, article.ProductCard, li.SearchProductCard, [data-test='product-card']"
+      name: ".name, .ProductCard__title, .product-title, [data-test='product-title']"
+      price: ".price-value, .ProductCard__price, .price, [data-test='product-price']"
+      brand: ".brand, .ProductCard__brand, [data-test='product-brand']"
+      url: "a[href]"
+      image: "img"
+      availability: ".availability, .stock"
+      unit: ".price__unit"
+    pagination:
+      param: "page"
+      start_page: 1
+      max_pages: 30
+    categories:
+      tiles:
+        url: "https://www.manomano.fr/carrelage"
+      sinks:
+        url: "https://www.manomano.fr/c/eviers-1614"
+      toilets:
+        url: "https://www.manomano.fr/c/wc-et-broyeurs-1399"
+      paint:
+        url: "https://www.manomano.fr/peinture"
+      vanities:
+        url: "https://www.manomano.fr/c/meubles-de-salle-de-bains-1273"
+      showers:
+        url: "https://www.manomano.fr/c/douches-1265"
