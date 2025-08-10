@@ -3,18 +3,6 @@
 Scrapes **Leroy Merlin** (Playwright), **Castorama** (requests), and **ManoMano** (Playwright) across multiple categories (tiles, sinks, toilets, paint, vanities, showers).  
 Handles pagination, anti-bot (browser fallback), product fields, and outputs JSON ready for Donizo’s pricing engine. Includes tests and optional API and vector-ready export.
 
----
-
-## Project structure
-/donizo-material-scraper/
-├── scraper.py
-├── config/
-│   └── scraper_config.yaml
-├── data/
-│   └── materials.json
-├── tests/
-│   └── test_scraper.py
-└── README.md
 
 
 ---
