@@ -3,6 +3,27 @@
 Scrapes **Leroy Merlin** (Playwright), **Castorama** (requests), and **ManoMano** (Playwright) across multiple categories (tiles, sinks, toilets, paint, vanities, showers).  
 Handles pagination, anti-bot (browser fallback), product fields, and outputs JSON ready for Donizo’s pricing engine. Includes tests and optional API and vector-ready export.
 
+📂 donizo-material-scraper/
+├── 📄 .gitignore — ignores venv, cache, and data artifacts
+├── 📄 README.md — project documentation and usage
+├── 📄 requirements.txt — Python dependencies
+├── 📄 scraper.py — main scraper script (all sites / individual sites)
+├── 📄 api.py — optional TF-IDF search API for scraped data
+├── 📂 config/
+│   └── 📄 scraper_config.yaml — category URLs, pagination, and site settings
+├── 📂 data/
+│   ├── 📄 materials.json — combined scrape output (all sites)
+│   ├── 📄 materials_castorama.json — Castorama scrape
+│   ├── 📄 materials_leroymerlin.json — Leroy Merlin scrape
+│   ├── 📄 materials_manomano.json — ManoMano scrape
+│   └── 📂 snaps/ — timestamped snapshots (for versioning)
+├── 📂 scripts/
+│   └── 📄 make_jsonl.py — convert scrape results into vector-ready JSONL
+├── 📂 tests/
+│   └── 📄 test_scraper.py — pytest for scraper functionality
+└── 📄 .github/workflows/monthly.yml — monthly auto-scrape CI workflow
+
+
 
 
 ---
